@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>论文评分系统</title>
+    <style>
+        /* 基础样式 */
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+        textarea {
+            width: 100%;
+            height: 300px;
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+        button {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>论文评分系统</h1>
+    <form action="/score" method="post">
+        <label for="paper_content">请输入论文内容：</label><br>
+        <textarea
+            id="paper_content"
+            name="paper_content"
+            placeholder="粘贴论文内容到这里..."
+            required
+        ></textarea><br>
+        <button type="submit">提交评分</button>
+    </form>
+</body>
+</html>

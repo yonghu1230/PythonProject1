@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>评分结果</title>
+    <style>
+        .details { margin: 20px; padding: 15px; border: 1px solid #ddd; }
+        .score-item { margin-bottom: 10px; }
+    </style>
+</head>
+<body>
+    <h1>论文综合评分：{{ details.total }} 分</h1>
+
+    <div class="details">
+        <h2>评分详情：</h2>
+        <div class="score-item">
+            <h3>原创性评分（30%）</h3>
+            <p>原始得分：{{ details.plagiarism.原始得分 }} | 加权得分：{{ details.plagiarism.加权得分 }}</p>
+            <p>状态：{{ details.plagiarism.状态 }}</p>
+        </div>
+
+        <div class="score-item">
+            <h3>格式规范性（20%）</h3>
+            <p>原始得分：{{ details.format.原始得分 }} | 加权得分：{{ details.format.加权得分 }}</p>
+            <p>状态：{{ details.format.状态 }}</p>
+        </div>
+
+        <div class="score-item">
+            <h3>内容质量（40%）</h3>
+            <p>原始得分：{{ details.content.原始得分 }} | 加权得分：{{ details.content.加权得分 }}</p>
+            <p>状态：{{ details.content.状态 }}</p>
+        </div>
+
+        <div class="score-item">
+            <h3>引用规范（10%）</h3>
+            <p>原始得分：{{ details.citation.原始得分 }} | 加权得分：{{ details.citation.加权得分 }}</p>
+            <p>状态：{{ details.citation.状态 }}</p>
+        </div>
+    </div>
+
+    <a href="/">返回重新评分</a>
+</body>
+</html>
